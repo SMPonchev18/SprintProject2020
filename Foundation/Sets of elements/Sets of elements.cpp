@@ -77,4 +77,17 @@ int* compareSets(int *arr, int n, int *arr2, int m, string action, int *a, int &
 	return a;
 }
 
+//function that checks which numbers contain in both two sets of numbers
+void Intersec(int *arr, int n, int *arr2, int m)
+{
+	cout << "The intersection of the sets A and B is: ";
+	int* c = new int[(double)n + m];
+	int k = 0;
+	compareSets(arr, n, arr2, m, "!=", c, k);
+	for (int i = 0; i < k; i++)
+		cout << c[i] << " ";
+	delete[]c;
+}
+
+
 
