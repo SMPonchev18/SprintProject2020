@@ -112,7 +112,26 @@ void Substract(int *arr, int n, int *arr2, int m)
 
 }
 
-///A function that shows a greeting message to all the users
+// a function that displays all the numbers from both sets and if there are number that are both in the two sets displays only one time
+void Union(int *a, int n, int* b, int m)
+{
+	cout << "The union of the sets A and B is: ";
+	int* c = new int[(double)n + m];
+	int k = 0;
+	for (int i = 0; i < n; i++) 
+	{
+		c[k] = a[i];
+		k++;
+	}
+	compareSets(b, m, a, n, "==", c, k);
+	for (int i = 0; i < k; i++)
+	{
+		cout << c[i] << " ";
+	}
+	delete[]c;
+}
+
+// a function that shows a greeting message to all the users
 void Hello()
 {
     cout << " _______________________\n";
