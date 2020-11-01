@@ -137,6 +137,52 @@ void Options()
     cout << "4. ------------- Exit ---------------- \n\n";
     cout << "Enter a valid option: ";
 }
+
+// this is the main menu of the program 
+void Menu()
+{
+    Hello();
+    int a[200], b[200], n, m;
+    EnterSetEl(a, n, "first");
+    EnterSetEl(b, m, "second");
+    int numchoice;
+    do
+    {
+        Options();
+        numchoice = LetterCheck();
+        while ((numchoice < 1) or (numchoice > 4))
+        {
+            cout << "\nError. You have to enter a number between 1 and 4:\n ";
+            numchoice = LetterCheck();
+        }
  
+        cout << endl;
+ 
+        switch (numchoice)
+        {
+        case 1:
+            Intersec(a, n, b, m);
+            break;
+ 
+        case 2:
+            Substract(a, n, b, m);
+            break;
+ 
+        case 3:
+            Union(a, n, b, m);
+            break;
+ 
+        case 4:
+            cout << "Bye!\n";
+            break;
+        }
+        cout << endl << endl;;
+    } while (numchoice != 4);
+}
 
-
+// The main function
+int main()
+{
+    Menu();
+}
+ 
