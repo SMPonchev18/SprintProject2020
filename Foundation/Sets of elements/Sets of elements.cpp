@@ -27,4 +27,21 @@ int SetChoice()
 	return option;
 }
 
+//input function for the elements in the set
+void EnterSetEl(int *arr, int& size, string number)
+{
+	cout << "Enter size of the " << number << " set of numbers: ";
+	size = LetterCheck();
+	while (size < 1) {
+		cout << "\nError.\nYou have to enter a whole number: ";
+		size = LetterCheck();
+	}
+	cout << endl;
+	cout << "Enter the " << number << " set of numbers: ";
+	for (int i = 0; i < size; i++)
+		arr[i] = LetterCheck();
+	cout << endl;
+}
+
+
 
