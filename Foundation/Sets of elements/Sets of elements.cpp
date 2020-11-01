@@ -127,4 +127,16 @@ void Hello()
     cout << "|_________|\n\n\n";
 }
 
+// function that shows all the options of our program
+void Options()
+{
+    cout << "--------------/ Options /-------------\n\n";
+    cout << "1. ----- Intersection (Sechenie) -----\n";
+    cout << "2. ----- Subtraction (Razlika) -------\n";
+    cout << "3. -------- Union (Obedinenie)--------\n";
+    cout << "4. ------------- Exit ---------------- \n\n";
+    cout << "Enter a valid option: ";
+}
+ 
+
 
