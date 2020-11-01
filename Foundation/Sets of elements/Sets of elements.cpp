@@ -112,7 +112,7 @@ void Substract(int *arr, int n, int *arr2, int m)
 
 }
 
-//function that shows a greeting message to all the users
+///A function that shows a greeting message to all the users
 void Hello()
 {
     cout << " _______________________\n";
