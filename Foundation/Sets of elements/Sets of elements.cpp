@@ -89,5 +89,26 @@ void Intersec(int *arr, int n, int *arr2, int m)
 	delete[]c;
 }
 
+//function that displays which numbers from the first set don't contain in the second 
+void Substract(int *arr, int n, int *arr2, int m)
+{
+	int* c = new int[(double)n + m];
+	int k = 0;
+	cout << "Choose from which set of numbers you want to subtract from?\n";
+	cout << "1. The first - A\n";
+	cout << "2. The second - B\n";
+	if (SetChoice() == 1) {
+		cout << "\nThe subtraction of the sets A and B is: ";
+		compareSets(arr, n, arr2, m, "==", c, k);
+	}
+	else
+	{
+		cout << "\nThe subtraction of the sets B a A is: ";
+		compareSets(arr2, m, arr, n, "==", c, k);
+	}
+	for (int i = 0; i < k; i++)
+		cout << c[i] << " ";
+	delete[]c;
+}
 
 
