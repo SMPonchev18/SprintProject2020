@@ -109,6 +109,22 @@ void Substract(int *arr, int n, int *arr2, int m)
 	for (int i = 0; i < k; i++)
 		cout << c[i] << " ";
 	delete[]c;
+
+}
+
+//function that shows a greeting message to all the users
+void Hello()
+{
+    cout << " _______________________\n";
+    cout << "|                       |\n";
+    cout << "|       Welcome to      |\n";
+    cout << "|          our          |\n";
+    cout << "|        project        |\n";
+    cout << "|_______________________|\n\n";
+    cout << " _________\n";
+    cout << "|         |\n";
+    cout << "|To start:|\n";
+    cout << "|_________|\n\n\n";
 }
 
 
