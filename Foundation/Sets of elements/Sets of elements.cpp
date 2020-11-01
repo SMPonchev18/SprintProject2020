@@ -43,5 +43,38 @@ void EnterSetEl(int *arr, int& size, string number)
 	cout << endl;
 }
 
+//function that compares the numbers in both two sets of numbers depending on the given action by the user 
+int* compareSets(int *arr, int n, int *arr2, int m, string action, int *a, int &k)
+{
+	int counter = 0;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			if (arr[i] == arr2[j])
+			{
+				counter++;
+			}
+		}
+		if (action == "!=")
+		{
+			if (counter != 0)
+			{
+				a[k] = arr[i];
+				k++;
+			}
+		}
+		else if (action == "==")
+		{
+			if (counter == 0)
+			{
+				a[k] = arr[i];
+				k++;
+			}
+		}
+		counter = 0;
+	}
+	return a;
+}
 
 
