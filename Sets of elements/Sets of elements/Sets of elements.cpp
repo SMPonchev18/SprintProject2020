@@ -36,8 +36,8 @@ void SetChoice()
 void EnterSetEl()
 {
 	cout << "Enter the size of the first set: ";
-	int num; 
-	cin >> num; 
+	int num;
+	cin >> num;
 	cout << endl;
 	firstSize = num;
 	cout << "Enter numbers in the first set: ";
@@ -60,7 +60,7 @@ void EnterSetEl()
 //function that checks which numbers contain in both two sets of numbers
 void Intersec()
 {
-	cout << "The numbers that are contained in both of the sets are: ";
+	cout << "The numbers that are contained in both sets are: ";
 	for (int i = 0; i < firstSize; i++)
 	{
 		for (int j = 0; j < secondSize; j++)
@@ -70,7 +70,9 @@ void Intersec()
 				cout << firstSet[i] << " ";
 			}
 		}
+	
 	}
+	
 	cout << endl;
 }
 
@@ -157,10 +159,10 @@ void Hello()
 void Options()
 {
 	cout << "--------------/ Options /-------------\n\n";
-	cout << "1. ----- Intersection (Sechenie) -----\n";
-	cout << "2. ----- Subtraction (Razlika) -------\n";
-	cout << "3. -------- Union (Obedinenie)--------\n";
-	cout << "4. ------------- Exit ---------------- \n\n";
+	cout << "1. --------- Intersection ------------\n";
+	cout << "2. --------- Subtraction -------------\n";
+	cout << "3. ------------ Union ----------------\n";
+	cout << "4. ------------ Exit ----------------- \n\n";
 	cout << "Enter a valid option: ";
 }
 
@@ -169,34 +171,29 @@ int main()
 {
 	Hello();
 	EnterSetEl();
-	char input;
+	int input; 
 	while (true)
 	{
 		Options();
 		cin >> input;
-		if (input == '1')
-		{
+		switch (input) {
+		case 1:
 			Intersec();
-		}
-		else if (input == '2')
-		{
+			break;
+		case 2:
 			Subtract();
-		}
-		else if (input == '3')
-		{
+			break;
+		case 3:
 			Union();
-		}
-		else if (input == '4')
-		{
+			break;
+		case 4:
 			cout << "\nThank you for using our program!\n\n";
 			return 0;
-		}
-		else
-		{
+		default:
 			cout << "Please enter a valid option from 1 to 4!";
+			break;
 		}
 	}
-	
 	system("pause");
 }
 
