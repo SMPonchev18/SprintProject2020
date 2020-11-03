@@ -137,6 +137,21 @@ void Union()
 	cout << endl;
 }
 
+//a function that sorts the sets
+void sortFunc(int arr[], int n, int min)
+{
+    for (int i = 0; i < n; i++)
+    {
+        min = 1;
+        for (int j = i;j < n; j++)
+        {
+            if (arr[min] > arr[j])
+                min = j;
+        }
+        swap(arr[min], arr[i]);
+    }
+}
+
 // a function that shows a greeting message to all the users
 void Hello()
 {
